@@ -59,9 +59,9 @@
 
  ## Linear Algebra : BLAS + LAPACK
  ### BLAS (Basic Linear Algebra Subprograms) and LAPACK (Linear Algebra Package) are libraries for performing linear algebra operations.
- ### BLAS is a set of low-level routines for performing basic vector and matrix operations.
- ### LAPACK is built on top of BLAS and provides higher-level routines for solving linear algebra problems.
- ### BLAS and LAPACK are widely used in scientific computing, machine learning, and data analysis.
+ - BLAS is a set of low-level routines for performing basic vector and matrix operations.
+ - LAPACK is built on top of BLAS and provides higher-level routines for solving linear algebra problems.
+ - BLAS and LAPACK are widely used in scientific computing, machine learning, and data analysis.
  ### To install BLAS and LAPACK on macOS using Homebrew, you can use the following commands:
  - `brew install openblas`
  - `brew install lapack`
