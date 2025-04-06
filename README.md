@@ -95,20 +95,20 @@ $~~~~~~~~~~~$
 - [ ] neural networks in haskell
 - [ ] cuda for GPU distribution in haskell 
 
-[!NOTE]
-Useful information that users should know, even when skimming content.
+> [!NOTE]  
+> Highlights information that users should take into account, even when skimming.
 
-[!TIP]
-Helpful advice for doing things better or more easily.
+> [!TIP]
+> Optional information to help a user be more successful.
 
-[!IMPORTANT]
-Key information users need to know to achieve their goal.
+> [!IMPORTANT]  
+> Crucial information necessary for users to succeed.
 
-[!WARNING]
-Urgent info that needs immediate user attention to avoid problems.
+> [!WARNING]  
+> Critical content demanding immediate user attention due to potential risks.
 
-[!CAUTION]
-Advises about risks or negative outcomes of certain actions.
+> [!CAUTION]
+> Negative potential consequences of an action.
 
 
 $~~~~~~~~~~~$
