@@ -15,9 +15,9 @@
  3. runhaskell or runghc is a command to run Haskell scripts directly
  4. stack is a Haskell build tool that manages project dependencies
  5. cabal is a system for building and packaging Haskell libraries and programs
-    so stack and cabal are both build tools, but they have different approaches
-    stack is more opinionated and provides a curated environment
-    while cabal is more flexible and allows for more customization
+    - so stack and cabal are both build tools, but they have different approaches
+    - stack is more opinionated and provides a curated environment
+    - while cabal is more flexible and allows for more customization
  6. ghci is the interactive environment for Haskell
  7. runghc see #3 above
 
@@ -28,7 +28,7 @@
  1. Code action: A code action is a specific action triggered by a user on a particular region of code.   
     Examples might include “add a type signature to this function”.
  2. Code lens: A pre-rendered edit or action shown in the body of the document itself, usually triggered with a click.
-    Examples might include “the type signature for a function, which is actually inserted on click”.
+ - Examples might include “the type signature for a function, which is actually inserted on click”.
  3. Completion item: An item that can be inserted into the text, including its metadata.
  4. Diagnostic: Any information about the project that is shown in the editor, including errors, warnings, and hints from tools such as hlint.
  5. Semantic highlighting: Special syntax highlighting performed by the server.
