@@ -57,9 +57,9 @@
  - or use this command: `cabal run hello.hs`    NO CAREFUL - it will try to upgrade before execution !!
 
 > [!WARNING]  
-> Running any stack command will try to install/upgrade
-> this is for initializing a package?
-> stack init --force linear-regression
+> Running any stack command will try to install/upgrade  
+> this is for initializing a package?  
+> stack init --force linear-regression  
 > 
 
  ## Haskell Version Management
