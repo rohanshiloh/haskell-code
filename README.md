@@ -1,5 +1,8 @@
 # Haskell for Good of Human Beans
 
+<!-- This content will not appear in the rendered Markdown -->
+<!-- This content will not appear in the rendered Markdown -->
+
 ## Summary 
  - GHC will produce an executable when the source file satisfies both conditions:
  1. Defines the main function in the source file
@@ -84,13 +87,31 @@
  - ==> Summary
  -  `/opt/homebrew/Cellar/lapack/3.12.1`: 30 files, 16.2MB
 
-
+$~~~~~~~~~~~$
 
 - [x] linear algebra in haskell
 - [x] linear regression in haskell with a plot
 - [ ] portfolio (quadratic) optimization in haskell
 - [ ] neural networks in haskell
 - [ ] cuda for GPU distribution in haskell 
+
+[!NOTE]
+Useful information that users should know, even when skimming content.
+
+[!TIP]
+Helpful advice for doing things better or more easily.
+
+[!IMPORTANT]
+Key information users need to know to achieve their goal.
+
+[!WARNING]
+Urgent info that needs immediate user attention to avoid problems.
+
+[!CAUTION]
+Advises about risks or negative outcomes of certain actions.
+
+
+$~~~~~~~~~~~$
 
 
  [www.cs.mcgill.ca/~rshah3](http://www.cs.mcgill.ca/~rshah3)
