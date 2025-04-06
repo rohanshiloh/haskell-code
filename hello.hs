@@ -1,4 +1,16 @@
+
 -- Haskell for Good of Human Beans
+
+-- GHC will produce an executable when the source file satisfies both conditions:
+-- 1. Defines the main function in the source file
+-- 2. Defines the module name to be Main (this can be done by adding module Main where at the top of the file), or does not have a module declaration (which is then inferred as the module Main).
+-- Otherwise, it will only produce the .o and .hi files.
+-- 3. Module: A module is a collection of Haskell code that can be imported and used in other modules.
+-- 4. Package: A package is a collection of modules that are distributed together.
+-- 5. Project: A project is a collection of packages that are built together.
+-- 6. Stack: A build tool for Haskell that manages project dependencies and builds.
+-- 7. Cabal: A system for building and packaging Haskell libraries and programs.
+
 -- 1. ghcup is used to install and manage Haskell toolchain versions
 -- 2. ghc is the Glasgow Haskell Compiler
 -- 3. runhaskell or runghc is a command to run Haskell scripts directly
@@ -23,6 +35,8 @@
 -- 6. Method: A LSP method is a function in the LSP protocol that the client can invoke to perform some action, e.g. ask for completions at a point.
 -- 7. LSP: Language Server Protocol, a protocol used by HLS to communicate with editors and IDEs.
 
+
+
 -- Code Execution in Haskell
 -- to run this code, use the command: ghc hello.hs -o hello && ./hello
 -- or use this command: runhaskell hello.hs
@@ -41,6 +55,8 @@
 -- ghcup list
 -- ghcup set ghc <version>
 
+
+
 -- Function to generate the Fibonacci sequence
 fibonacci :: Int -> [Int]
 fibonacci n = take n $ fibs
@@ -56,4 +72,10 @@ main = do
 
     putStrLn "The first 10 Fibonacci numbers are:"
     print (fibonacci 10)
+    printStrLn "Ding Dong the Queen is Dead"
 
+rohanFunction :: String -> IO ()
+rohanFunction str = do
+    putStrLn str
+    putStrLn "This is a test function"
+    
