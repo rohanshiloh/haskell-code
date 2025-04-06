@@ -3,6 +3,7 @@
 <!-- This content will not appear in the rendered Markdown -->
 <!-- This content will not appear in the rendered Markdown -->
 
+
 ## Summary 
  - GHC will produce an executable when the source file satisfies both conditions:
  1. Defines the main function in the source file
@@ -55,6 +56,12 @@
  - or use this command: `stack runghc hello.hs` NO CAREFUL - it will try to upgrade before execution !!
  - or use this command: `cabal run hello.hs`    NO CAREFUL - it will try to upgrade before execution !!
 
+> [!WARNING]  
+> Running any stack command will try to install/upgrade
+> this is for initializing a package?
+> stack init --force linear-regression
+> 
+
  ## Haskell Version Management
  - `cd ~/.ghcup/`
  - `cd ~/.ghcup/ghc`
@@ -87,7 +94,7 @@
  - ==> Summary
  -  `/opt/homebrew/Cellar/lapack/3.12.1`: 30 files, 16.2MB
 
-$~~~~~~~~~~~$
+$~~~~~~~~~~~~~~$
 
 - [x] linear algebra in haskell
 - [x] linear regression in haskell with a plot
@@ -111,7 +118,12 @@ $~~~~~~~~~~~$
 > Negative potential consequences of an action.
 
 
-$~~~~~~~~~~~$
+$~~~~~~~~~~~~~~~~~~~~$
 
 
  [www.cs.mcgill.ca/~rshah3](http://www.cs.mcgill.ca/~rshah3)
+
+
+ ## References
+
+ [Linear Regression Using Haskell - Sam Gardner](https://samcgardner.github.io/2018/10/06/linear-regression-in-haskell.html)
