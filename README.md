@@ -1,6 +1,7 @@
 # Haskell for Good of Human Beans
 
- ## GHC will produce an executable when the source file satisfies both conditions:
+## Summary 
+ - GHC will produce an executable when the source file satisfies both conditions:
  1. Defines the main function in the source file
  2. Defines the module name to be Main (this can be done by adding module Main where at the top of the file), or does not have a module declaration (which is then inferred as the module Main). Otherwise, it will only produce the .o and .hi files.
  3. Module: A module is a collection of Haskell code that can be imported and used in other modules.
@@ -9,7 +10,7 @@
  6. Stack: A build tool for Haskell that manages project dependencies and builds.
  7. Cabal: A system for building and packaging Haskell libraries and programs.
 
-## Summary
+## Terminal
  1. ghcup is used to install and manage Haskell toolchain versions
  2. ghc is the Glasgow Haskell Compiler
  3. runhaskell or runghc is a command to run Haskell scripts directly
@@ -26,9 +27,9 @@
  
  ### Here are a few pieces of jargon that you may come across in the HLS docs or when discussing problems:
  1. Code action: A code action is a specific action triggered by a user on a particular region of code.   
-    Examples might include “add a type signature to this function”.
+    - Examples might include “add a type signature to this function”.
  2. Code lens: A pre-rendered edit or action shown in the body of the document itself, usually triggered with a click.
- - Examples might include “the type signature for a function, which is actually inserted on click”.
+    - Examples might include “the type signature for a function, which is actually inserted on click”.
  3. Completion item: An item that can be inserted into the text, including its metadata.
  4. Diagnostic: Any information about the project that is shown in the editor, including errors, warnings, and hints from tools such as hlint.
  5. Semantic highlighting: Special syntax highlighting performed by the server.
