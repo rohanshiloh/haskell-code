@@ -1,0 +1,1 @@
+-- Haskell for Good of Human Beans
