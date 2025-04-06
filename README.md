@@ -1,7 +1,6 @@
 # Haskell for Good of Human Beans
 
-<!-- This content will not appear in the rendered Markdown -->
-<!-- This content will not appear in the rendered Markdown -->
+<!-- We recommend installing both. Most Haskell projects can be built using Cabal, but some might require Stack. Installing both guarantees that you can use either, and while following a tutorial or book you can use whatever they recommend. -->
 
 
 ## Summary 
@@ -39,6 +38,10 @@
  5. Semantic highlighting: Special syntax highlighting performed by the server.
  6. Method: A LSP method is a function in the LSP protocol that the client can invoke to perform some action, e.g. ask for completions at a point.
  7. LSP: Language Server Protocol, a protocol used by HLS to communicate with editors and IDEs.
+> [!NOTE]  
+> Press Ctrl+Shift+P and click 'Haskell: Restart Haskell LSP Server' (start typing to find it).
+
+
 
 
  ## Code Execution in Haskell
@@ -54,13 +57,43 @@
  - ghci: Interactive environment for testing and debugging.
  - runghc & runhaskell: Non-interactive, used to execute Haskell scripts directly without creating a compiled binary.
  - or use this command: `stack runghc hello.hs` NO CAREFUL - it will try to upgrade before execution !!
- - or use this command: `cabal run hello.hs`    NO CAREFUL - it will try to upgrade before execution !!
+ - or use this command: `cabal run hello.hs`    NO CAREFUL - this doesn't work
 
 > [!WARNING]  
-> Running any stack command will try to install/upgrade  
-> this is for initializing a package?  
+> Running any stack command will try to install/upgrade? maybe not if there is a stack.yaml file in the project?
+> this is for initializing a package but don't run if there is already a stack.ayml file available
 > stack init --force linear-regression  
-> 
+> stack clean 
+> stack build
+> stack run
+
+
+
+
+
+
+
+
+### Notes for Running the linear-regression Project
+1. `stack init --force linear-regression` this is not be necessary if there is already a stack.yaml file
+2. FOR ERROR: HLS does not support GHC 9.8.4 yet.
+  - use LTS Haskell 21.24 (ghc-9.4.8)
+  - stack.yaml: `snapshot: lts-21.24`
+  or\
+  - Control whether we use the GHC we find on the path: `stack.yaml: system-ghc: true`
+3. `stack init --force linear-regression` will overwrite the existing stack.yaml and choose its own resolver
+  - you want to use the resolver `lts-21.24` for `ghc-9.4.8`
+  - or one of the other `ghc-9.4.8` resolvers from here: https://www.stackage.org/snapshots?page=10
+4. Build & Run & Clean & Re-Run
+  1. `stack clean` : deletes build artefacts for all project packages - run this to re-build
+  2. `stack build` : build locally
+  3. `stack run`
+
+
+
+
+
+
 
  ## Haskell Version Management
  - `cd ~/.ghcup/`
