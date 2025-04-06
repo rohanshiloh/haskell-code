@@ -37,25 +37,25 @@
 
 
  ## Code Execution in Haskell
- to start the interactive environment, use the command: ghci
- to load a file in the interactive environment, use the command: :load hello.hs
- to compile and run this code, use the command: ghc hello.hs -o hello && ./hello
- with warnings: ghc -Wall hello.hs -fforce-recomp -o hello && ./hello
- or use this command: runhaskell hello.hs
- or use this command: runghc hello.hs (same as runhaskell)
- or use this command: ghci hello.hs
- or use this command: ghci hello.hs -o hello && ./hello
+ 1. to start the interactive environment, use the command: `ghci`
+ 2. to load a file in the interactive environment, use the command: `:load hello.hs`
+ 3. to compile and run this code, use the command: `ghc hello.hs -o hello && ./hello`
+ 4. with warnings: `ghc -Wall hello.hs -fforce-recomp -o hello && ./hello`
+ 5. or use this command: `runhaskell hello.hs`
+ 6. or use this command: `runghc hello.hs (same as runhaskell)`
+ 7. or use this command: `ghci hello.hs`
+ 8. or use this command: `ghci hello.hs -o hello && ./hello`
  ### Key Differences:
- ghci: Interactive environment for testing and debugging.
- runghc/runhaskell: Non-interactive, used to execute Haskell scripts directly without creating a compiled binary.
- or use this command: stack runghc hello.hs NO CAREFUL - it will try to upgrade before execution !!
- or use this command: cabal run hello.hs    NO CAREFUL - it will try to upgrade before execution !!
+ - ghci: Interactive environment for testing and debugging.
+ - runghc & runhaskell: Non-interactive, used to execute Haskell scripts directly without creating a compiled binary.
+ - or use this command: `stack runghc hello.hs` NO CAREFUL - it will try to upgrade before execution !!
+ - or use this command: `cabal run hello.hs`    NO CAREFUL - it will try to upgrade before execution !!
 
  ## Haskell Version Management
- cd ~/.ghcup/
- cd ~/.ghcup/ghc
- ghcup list
- ghcup set ghc <version>
+ - `cd ~/.ghcup/`
+ - `cd ~/.ghcup/ghc`
+ - `ghcup list`
+ - `ghcup set ghc <version>`
 
  ## Linear Algebra : BLAS + LAPACK
  ### BLAS (Basic Linear Algebra Subprograms) and LAPACK (Linear Algebra Package) are libraries for performing linear algebra operations.
@@ -63,22 +63,22 @@
  ### LAPACK is built on top of BLAS and provides higher-level routines for solving linear algebra problems.
  ### BLAS and LAPACK are widely used in scientific computing, machine learning, and data analysis.
  ### To install BLAS and LAPACK on macOS using Homebrew, you can use the following commands:
- brew install openblas
- brew install lapack
- openblas is keg-only, which means it was not symlinked into /opt/homebrew,
- because macOS provides BLAS in Accelerate.framework.
+ - `brew install openblas`
+ - `brew install lapack`
+ - openblas is keg-only, which means it was not symlinked into /opt/homebrew,
+ - because macOS provides BLAS in Accelerate.framework.
  ### For compilers to find openblas you may need to set:
-  export LDFLAGS="-L/opt/homebrew/opt/openblas/lib $LDFLAGS"
-  export CPPFLAGS="-I/opt/homebrew/opt/openblas/include $CPPFLAGS"
+ - `export LDFLAGS="-L/opt/homebrew/opt/openblas/lib $LDFLAGS"`
+ - `export CPPFLAGS="-I/opt/homebrew/opt/openblas/include $CPPFLAGS"`
  ### and for the Haskell compiler to find openblas you may need to set:
-  export PKG_CONFIG_PATH="/opt/homebrew/opt/openblas/lib/pkgconfig $PKG_CONFIG_PATH"
+ - `export PKG_CONFIG_PATH="/opt/homebrew/opt/openblas/lib/pkgconfig $PKG_CONFIG_PATH"`
 
- lapack is keg-only, which means it was not symlinked into /opt/homebrew,
- because macOS provides LAPACK in Accelerate.framework.
- For compilers to find lapack you may need to set:
-  export LDFLAGS="-L/opt/homebrew/opt/lapack/lib $LDFLAGS"
-  export CPPFLAGS="-I/opt/homebrew/opt/lapack/include $CPPFLAGS"
- and for the Haskell compiler to find lapack you may need to set:
-  export PKG_CONFIG_PATH="/opt/homebrew/opt/lapack/lib/pkgconfig $PKG_CONFIG_PATH"
- ==> Summary
-  /opt/homebrew/Cellar/lapack/3.12.1: 30 files, 16.2MB
+ - lapack is keg-only, which means it was not symlinked into `/opt/homebrew`,
+ - because macOS provides LAPACK in Accelerate.framework.
+ - For compilers to find lapack you may need to set:
+ -  `export LDFLAGS="-L/opt/homebrew/opt/lapack/lib $LDFLAGS"`
+ -  `export CPPFLAGS="-I/opt/homebrew/opt/lapack/include $CPPFLAGS"`
+ - and for the Haskell compiler to find lapack you may need to set:
+ -  `export PKG_CONFIG_PATH="/opt/homebrew/opt/lapack/lib/pkgconfig $PKG_CONFIG_PATH"`
+ - ==> Summary
+ -  `/opt/homebrew/Cellar/lapack/3.12.1`: 30 files, 16.2MB
