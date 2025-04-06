@@ -36,9 +36,11 @@
 -- 7. LSP: Language Server Protocol, a protocol used by HLS to communicate with editors and IDEs.
 
 
-
 -- Code Execution in Haskell
--- to run this code, use the command: ghc hello.hs -o hello && ./hello
+-- to start the interactive environment, use the command: ghci
+-- to load a file in the interactive environment, use the command: :load hello.hs
+-- to compile and run this code, use the command: ghc hello.hs -o hello && ./hello
+-- with warnings: ghc -Wall hello.hs -fforce-recomp -o hello && ./hello
 -- or use this command: runhaskell hello.hs
 -- or use this command: runghc hello.hs (same as runhaskell)
 -- or use this command: ghci hello.hs
@@ -55,6 +57,31 @@
 -- ghcup list
 -- ghcup set ghc <version>
 
+-- Linear Algebra : BLAS + LAPACK
+-- BLAS (Basic Linear Algebra Subprograms) and LAPACK (Linear Algebra Package) are libraries for performing linear algebra operations.
+-- BLAS is a set of low-level routines for performing basic vector and matrix operations.
+-- LAPACK is built on top of BLAS and provides higher-level routines for solving linear algebra problems.
+-- BLAS and LAPACK are widely used in scientific computing, machine learning, and data analysis.
+-- To install BLAS and LAPACK on macOS using Homebrew, you can use the following commands:
+-- brew install openblas
+-- brew install lapack
+-- openblas is keg-only, which means it was not symlinked into /opt/homebrew,
+-- because macOS provides BLAS in Accelerate.framework.
+-- For compilers to find openblas you may need to set:
+--  export LDFLAGS="-L/opt/homebrew/opt/openblas/lib $LDFLAGS"
+--  export CPPFLAGS="-I/opt/homebrew/opt/openblas/include $CPPFLAGS"
+-- and for the Haskell compiler to find openblas you may need to set:
+--  export PKG_CONFIG_PATH="/opt/homebrew/opt/openblas/lib/pkgconfig $PKG_CONFIG_PATH"
+--
+-- lapack is keg-only, which means it was not symlinked into /opt/homebrew,
+-- because macOS provides LAPACK in Accelerate.framework.
+-- For compilers to find lapack you may need to set:
+--  export LDFLAGS="-L/opt/homebrew/opt/lapack/lib $LDFLAGS"
+--  export CPPFLAGS="-I/opt/homebrew/opt/lapack/include $CPPFLAGS"
+-- and for the Haskell compiler to find lapack you may need to set:
+--  export PKG_CONFIG_PATH="/opt/homebrew/opt/lapack/lib/pkgconfig $PKG_CONFIG_PATH"
+-- ==> Summary
+--  /opt/homebrew/Cellar/lapack/3.12.1: 30 files, 16.2MB
 
 
 -- Function to generate the Fibonacci sequence
