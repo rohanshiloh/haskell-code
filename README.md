@@ -83,3 +83,14 @@
  -  `export PKG_CONFIG_PATH="/opt/homebrew/opt/lapack/lib/pkgconfig $PKG_CONFIG_PATH"`
  - ==> Summary
  -  `/opt/homebrew/Cellar/lapack/3.12.1`: 30 files, 16.2MB
+
+
+
+- [x] linear algebra in haskell
+- [x] linear regression in haskell with a plot
+- [ ] portfolio (quadratic) optimization in haskell
+- [ ] neural networks in haskell
+- [ ] cuda for GPU distribution in haskell 
+
+
+ [www.cs.mcgill.ca/~rshah3](http://www.cs.mcgill.ca/~rshah3)
