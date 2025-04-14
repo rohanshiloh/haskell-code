@@ -69,7 +69,10 @@
 
 
 
-
+   - The presence of such an environment file is likely to confuse or break other tools because it changes GHC's behaviour: it changes the default package set in ghc and ghci from its normal value (which is "all boot libraries"). GHC environment files are little-used and often not tested for.
+> [!IMPORTANT]  
+> Rohan you moved the default file to /tmp/ from ~/.ghc/aarch64-darwin-9.4.8/environments/
+> to avoid the above issue when running cabal instal <package>
 
 
 
