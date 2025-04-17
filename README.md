@@ -67,9 +67,53 @@
 > stack build
 > stack run
 
+## Installing the vector Package
+   - ghc-pkg list
+   - cabal info vector
+   - cabal install vector
+   - vim /Users/rohanshilohshah/.vscode/extensions/justusadam.language-haskell-3.6.0/syntax-examples/cabal.cabal
+
+   - Resolving dependencies...
+   Warning:
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   @ WARNING: Installation might not be completed as desired! @
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   The command "cabal install [TARGETS]" doesn't expose libraries.
+   * You might have wanted to add them as dependencies to your package. In this
+   case add "vector, vector" to the build-depends field(s) of your package's
+   .cabal file.
+   * You might have wanted to add them to a GHC environment. In this case use
+   "cabal install --lib vector vector". The "--lib" flag is provisional: see
+   https://github.com/haskell/cabal/issues/6481 for more information.
+   Warning:
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   @ WARNING: Installation might not be completed as desired! @
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   The command "cabal install [TARGETS]" doesn't expose libraries.
+   * You might have wanted to add them as dependencies to your package. In this
+   case add "vector, vector" to the build-depends field(s) of your package's
+   .cabal file.
+   * You might have wanted to add them to a GHC environment. In this case use
+   "cabal install --lib vector vector". The "--lib" flag is provisional: see
+   https://github.com/haskell/cabal/issues/6481 for more information.
 
 
+   - After running: `cabal install --lib vector vector`
+   - Resolving dependencies...
+      Warning: The libraries were installed by creating a global GHC environment
+      file at:
+      /Users/rohanshilohshah/.ghc/aarch64-darwin-9.4.8/environments/default
    - The presence of such an environment file is likely to confuse or break other tools because it changes GHC's behaviour: it changes the default package set in ghc and ghci from its normal value (which is "all boot libraries"). GHC environment files are little-used and often not tested for.
+   - Furthermore, management of these environment files is still more difficult
+      than it could be; see e.g. https://github.com/haskell/cabal/issues/6481 .
+
+      Double-check that creating a global GHC environment file is really what you
+      wanted! You can limit the effects of the environment file by creating it in a
+      specific directory using the --package-env flag. For example, use:
+
+      cabal install --lib <packages...> --package-env
+
+      to create the file in the current directory.
 > [!IMPORTANT]  
 > Rohan you moved the default file to /tmp/ from ~/.ghc/aarch64-darwin-9.4.8/environments/
 > to avoid the above issue when running cabal install <package>
@@ -81,8 +125,8 @@
 1. `stack init --force linear-regression` this is not be necessary if there is already a stack.yaml file
 2. FOR ERROR: HLS does not support GHC 9.8.4 yet.
   - use LTS Haskell 21.24 (ghc-9.4.8)
-  - stack.yaml: `snapshot: lts-21.24`
-  or\
+  - in the file stack.yaml: `snapshot: lts-21.24`
+  - or
   - Control whether we use the GHC we find on the path: `stack.yaml: system-ghc: true`
 3. `stack init --force linear-regression` will overwrite the existing stack.yaml and choose its own resolver
   - you want to use the resolver `lts-21.24` for `ghc-9.4.8`
