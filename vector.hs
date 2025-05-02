@@ -23,7 +23,7 @@ import qualified GHC.TypeNats as U
 -- | to perform efficient operations on large collections of data.
 main :: IO ()
 main = do
-
+    
     let list = [1..10] :: [Int]
         vector = V.fromList list :: V.Vector Int
         vector2 = V.enumFromTo 1 10 :: V.Vector Int
@@ -41,7 +41,7 @@ main = do
     print $ V.head vector -- 1
     print $ V.tail vector -- 2,3,4,...,10
     -- print $ V.head $ V.takeWhile even vector -- exception! vector: index out of bounds (0,0)
-
+    functorFoldableTraversableExamples
 
     -- Get all of the contents from stdin
     lbs <- L.getContents
@@ -94,10 +94,31 @@ main = do
 
 -- Exercise 2: Try using the Functor, Foldable, and Traversable versions of functions with a vector
 
+functorFoldableTraversableExamples :: IO ()
+functorFoldableTraversableExamples = do
+    let vector = V.fromList [1..10] :: V.Vector Int
+    
+    -- Functor: Apply a function to each element
+    print $ fmap (*2) vector -- Output: [2,4,6,8,10,12,14,16,18,20]
 
+    -- Foldable: Sum all elements
+    print $ foldr (+) 0 vector -- Output: 55
 
+    -- Foldable: Find the product of all elements
+    print $ foldl (*) 1 vector -- Output: 3628800
 
+    -- Foldable: Check if all elements are greater than 0
+    print $ all (> 0) vector -- Output: True
 
+    -- Foldable: Check if any element is greater than 5
+    print $ any (> 5) vector -- Output: True
+
+    -- Traversable: Traverse the vector with a function that wraps elements in Maybe
+    print $ traverse (\x -> Just (x * 2)) vector -- Output: Just [2,4,6,8,10,12,14,16,18,20]
+
+    -- Traversable: Traverse the vector with a function that filters out odd numbers
+    print $ traverse (\x -> if even x then Just x else Nothing) vector 
+    -- Output: Nothing (because odd numbers exist in the vector)
 
 
 -- Exercise 3: Use an unboxed (or storable) vector instead of the boxed vectors we were using above. 
