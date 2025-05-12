@@ -6,12 +6,12 @@
 ## Summary 
  - GHC will produce an executable when the source file satisfies both conditions:
  1. Defines the main function in the source file
- 2. Defines the module name to be Main (this can be done by adding module Main where at the top of the file), or does not have a module declaration (which is then inferred as the module Main). Otherwise, it will only produce the .o and .hi files.
- 3. Module: A module is a collection of Haskell code that can be imported and used in other modules.
- 4. Package: A package is a collection of modules that are distributed together.
- 5. Project: A project is a collection of packages that are built together.
- 6. Stack: A build tool for Haskell that manages project dependencies and builds.
- 7. Cabal: A system for building and packaging Haskell libraries and programs.
+ 2. Defines the module name to be Main (this can be done by adding module Main where at the top of the file), or does not have a module declaration (which is then inferred as the module Main). Otherwise, it will only produce the `.o` and `.hi` files.
+ - Module: A module is a collection of Haskell code that can be imported and used in other modules.
+ - Package: A package is a collection of modules that are distributed together.
+ - Project: A project is a collection of packages that are built together.
+ - Stack: A build tool for Haskell that manages project dependencies and builds.
+ - Cabal: A system for building and packaging Haskell libraries and programs.
 
 ## Terminal
  1. ghcup is used to install and manage Haskell toolchain versions
@@ -28,7 +28,7 @@
  ## HLC or the Haskell Language Server 
  is a server that communicates with editors and IDEs using the Language Server Protocol (LSP).
  
- ### Here are a few pieces of jargon that you may come across in the HLS docs or when discussing problems:
+ ### "Here are a few pieces of jargon that you may come across in the HLS docs or when discussing problems:"
  1. Code action: A code action is a specific action triggered by a user on a particular region of code.   
     - Examples might include “add a type signature to this function”.
  2. Code lens: A pre-rendered edit or action shown in the body of the document itself, usually triggered with a click.
@@ -38,6 +38,7 @@
  5. Semantic highlighting: Special syntax highlighting performed by the server.
  6. Method: A LSP method is a function in the LSP protocol that the client can invoke to perform some action, e.g. ask for completions at a point.
  7. LSP: Language Server Protocol, a protocol used by HLS to communicate with editors and IDEs.
+ 8. https://github.com/haskell/haskell-language-server/blob/master/docs/what-is-hls.md
 > [!NOTE]  
 > Press Ctrl+Shift+P and click 'Haskell: Restart Haskell LSP Server' (start typing to find it).
 
@@ -207,3 +208,5 @@ $~~~~~~~~~~~~~~~~~~~~$
  ## References
 
  [Linear Regression Using Haskell - Sam Gardner](https://samcgardner.github.io/2018/10/06/linear-regression-in-haskell.html)
+
+ [Reference for Haskell Language Server (HLS) - written by Haskell][https://github.com/haskell/haskell-language-server/blob/master/docs/what-is-hls.md]
