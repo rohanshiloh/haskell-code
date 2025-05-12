@@ -1,5 +1,5 @@
 -- Enter distraction-free Zen mode: Command+K Z
--- Open Keyboard Shortcuts: Command+K Command+S
+-- Open Keyboard Shortcuts: Command+K --> Command+S
 
 
 -- The Sieve of Eratosthenes is an ancient algorithm for finding all prime numbers up to a specified integer.
